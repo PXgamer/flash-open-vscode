@@ -11,3 +11,7 @@ Right click on a `.fla` file in the `tree-view` that you want to open in Adobe F
 ## Notes
 
 - Please report problems to [Github issues](https://github.com/pxgamer/flash-open-vscode/issues).
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

@@ -2,7 +2,7 @@
     "name": "flasho",
     "displayName": "Flash Open",
     "description": "Open .fla files in Adobe Flash.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "keywords": [
         "adobe",
@@ -68,8 +68,8 @@
         }
     },
     "devDependencies": {
-        "vscode": "^1.1.5",
-        "eslint": "^4.6.1"
+        "vscode": "^1.1",
+        "eslint": "^4.12"
     },
     "repository": {
         "type": "git",

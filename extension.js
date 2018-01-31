@@ -1,33 +1,36 @@
-import vscode from 'vscode';
-import path from 'path';
-import {exec} from 'child_process';
-const config = vscode.workspace.getConfiguration('flasho');
+import vscode from 'vscode'
+import path from 'path'
+import { exec } from 'child_process'
 
-function activate(context) {
+const config = vscode.workspace.getConfiguration('flasho')
+
+function activate (context) {
   const disposable = vscode.commands.registerCommand('flasho.Flash', contextInfo => {
-    const pathName = contextInfo.fsPath;
-    const extension = path.extname(pathName);
+    const pathName = contextInfo.fsPath
+    const extension = path.extname(pathName)
 
     if (extension === '.fla') {
-      const program_path = (config.os_bit == '64-bit') ? 'Program Files (x86)' : 'Program Files';
-      const execCmd = `"C:\\${program_path}\\Adobe\\Adobe Flash ${config.version}\\Flash.exe" "${pathName}"`;
+      const program_path = (config.os_bit == '64-bit') ? 'Program Files (x86)' : 'Program Files'
+      const execCmd = `"C:\\${program_path}\\Adobe\\Adobe Flash ${config.version}\\Flash.exe" "${pathName}"`
 
-      exec(execCmd);
+      exec(execCmd)
 
       if (config.notify) {
-        vscode.window.showInformationMessage(`Opening ${path.basename(pathName)} in Adobe Flash`);
+        vscode.window.showInformationMessage(`Opening ${path.basename(pathName)} in Adobe Flash`)
       }
     } else {
       if (config.notify) {
-        vscode.window.showInformationMessage('Not a valid .fla file.');
+        vscode.window.showInformationMessage('Not a valid .fla file.')
       }
     }
-  });
+  })
 
-  context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable)
 }
-export {activate};
 
-function deactivate() {
+export { activate }
+
+function deactivate () {
 }
-export {deactivate};
+
+export { deactivate }

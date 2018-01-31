@@ -10,8 +10,8 @@ function activate (context) {
     const extension = path.extname(pathName)
 
     if (extension === '.fla') {
-      const program_path = (config.os_bit == '64-bit') ? 'Program Files (x86)' : 'Program Files'
-      const execCmd = `"C:\\${program_path}\\Adobe\\Adobe Flash ${config.version}\\Flash.exe" "${pathName}"`
+      const programPath = (config.os_bit == '64-bit') ? 'Program Files (x86)' : 'Program Files'
+      const execCmd = `"C:\\${programPath}\\Adobe\\Adobe Flash ${config.version}\\Flash.exe" "${pathName}"`
 
       exec(execCmd)
 

@@ -7,7 +7,7 @@ Open `.fla` files in Adobe Flash.
 With VS Code
 
 ```bash
-$ code --install-extension pxgamer.hgwo
+$ code --install-extension pxgamer.flasho
 ```
 
 ## Usage

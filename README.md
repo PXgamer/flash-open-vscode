@@ -1,5 +1,7 @@
 # flash-open-vscode
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pxgamer/flash-open-vscode.svg)](https://greenkeeper.io/)
+
 Open `.fla` files in Adobe Flash.
 
 ## Usage
